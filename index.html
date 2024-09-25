@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Base64 Encode and Decode Tool with character set options. Easily convert text or files to Base64 or decode them back.">
+  <meta name="keywords" content="Base64 Encode, Base64 Decode, Character Set, Text to Base64, File to Base64, Free Tool">
+  <meta name="author" content="Anand">
+  <title>Base64 Encode/Decode Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Base64 Encode and Decode Tool</h1>
+    <p>Encode or decode text and files using different character sets and Base64 format.</p>
+    
+    <div class="options">
+      <div>
+        <label for="input-type">Select Input Type:</label>
+        <select id="input-type">
+          <option value="text">Text</option>
+          <option value="file">File</option>
+        </select>
+      </div>
+      <div>
+        <label for="charset">Character Set:</label>
+        <select id="charset">
+          <optgroup label="Populars">
+            <option value="UTF-8">UTF-8</option>
+            <option value="ASCII">ASCII</option>
+            <option value="ISO-8859-1">ISO-8859-1</option>
+            <option value="ISO-8859-15">ISO-8859-15</option>
+            <option value="Windows-1252">Windows-1252</option>
+          </optgroup>
+          <optgroup label="Others">
+            <option value="Big5">BIG-5</option>
+            <option value="CP850">CP850</option>
+            <!-- Add more options as needed -->
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="action">Choose Action:</label>
+        <select id="action">
+          <option value="encode">Encode</option>
+          <option value="decode">Decode</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Text or File Input -->
+    <textarea id="text-input" placeholder="Enter your text here"></textarea>
+    <input type="file" id="file-input" style="display: none;" accept=".txt,.json,.csv,.xml"/>
+
+    <!-- Progress Bar -->
+    <div id="progressbar" style="display: none;"><div class="progress-label">Loading...</div></div>
+
+    <!-- Buttons -->
+    <button id="convert-btn">Convert</button>
+    <button id="clear-btn">Clear</button>
+
+    <!-- Output Textarea -->
+    <h3>Output:</h3>
+    <textarea id="output" readonly placeholder="The result will be displayed here..."></textarea>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
